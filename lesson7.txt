@@ -1,0 +1,15 @@
+nested documents
+  ex:
+    db.collectionsName.insertOne({
+        title: "way of of kings", 
+        author: "Brandon", 
+        rating: 9, 
+        pages: 400, 
+        genres: ["fantasy"], 
+        reviews: [
+          {name: "yossab", body: "great book"}, 
+          {name : "samouel", body: "good"}]
+      })
+  ** and obviously you can use insertMany
+  ** if your nested document is one document use prop: { prop1: value}
+    else use prop: [ {prop1: value}, {prop1: value}]

@@ -1,0 +1,14 @@
+$in operator 
+  1- if you have multiple values of the same prop 
+    you can use $or but it will take to much repeat times but $in
+    will do the job easily
+  2- syntax
+    db.collectionName.find({property: {$in: [value1, value2, value3]}})
+  3- difference between $or and $in
+    $in: 
+      db.collectionName.find({property: {$in: [value1, value2, value3]}})
+
+    $or:
+      db.collectionName.find({$or: [{property: value1}, {property: value2}, {property: value3}]})
+$nin not in operator
+  db.collectionName.find({property: {$nin: [value1, value2, value3]}})

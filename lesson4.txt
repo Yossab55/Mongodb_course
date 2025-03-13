@@ -1,0 +1,11 @@
+to use any command: 
+  1- make sure you're in the correct db
+  2- db.collectionName.command
+  ** db here references the current database you're in. 
+
+to insert one:
+  db.collectionName.insertOne({prop: "value", .....})
+what if the collectionName does not exits?
+  mongodb will create the collection and insertYour data
+to insert many: 
+  db.collectionName.insertOne([{prop: "value", .....}, {prop: "value", .....}])

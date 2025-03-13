@@ -1,0 +1,10 @@
+if you were using local driver 
+  just change the connection string
+  how:
+    1- go to mongo db atlas
+    2- create account if you don't have one
+    3- go along with the instructions
+    4- create database
+    5- create user and password connection
+    6- take connection string (from cluster connect)
+    7- switch the local connection in your app to the driver collection

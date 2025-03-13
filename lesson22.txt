@@ -1,0 +1,27 @@
+indexes 
+  indexes not always best practice 
+
+  why? 
+    if there is an update on a filed of book you need to update the indexes
+  so you don't need indexes for everything
+
+  so when I should use it?
+    when you have lots of documents to search in and you want to make
+  search faster and you know faster means higher memory usage! 
+
+  to create an index:
+    * db.collectionName.createIndex({prop: value});
+  
+  to get indexes have been created:
+    * db.collectionName.getIndexes()
+
+  to see the deference:
+    before creating indexes try this query:
+      db.collectionName.find({rating: 8}).explain("executionStats")
+    then search for nReturned and totalDocsExamined
+    
+    next great the index based on rating: 8 
+    then repeat the explain query again and the nReturned and totalDocsExamined
+
+  to drop and index:
+    db.collectionName.dropIndex({sameProp: withSameValue!!})

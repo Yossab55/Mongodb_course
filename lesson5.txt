@@ -1,0 +1,17 @@
+find method (select in mysql)
+  find(filter, props)
+to find all records:
+  db.collectionName.find({}) = find();
+  ** mongoSh - in shell - output first 20 items only
+  ** use it to get the next 20 items
+to find records with condition
+  db.collectionName.find({prop: "value"});
+  in my sql select * from table where = value;
+to get specific prop
+  db.collectionName.find({}, {prop1 : 1, prop2 : 1})
+  in my sql select name, id from table;
+to get specific prop and filter find
+  db.collectionName.find({prop: "value"},  {prop1: 1, prop2: 2});
+to get one Item:
+  db.collectionName.findOne({_id: idObjectIN mongo})
+  ex: db.books.findOne({_id: ObjectId('67c9432d699db7bdfc5c78fa')});

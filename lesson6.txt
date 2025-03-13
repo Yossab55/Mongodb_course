@@ -1,0 +1,14 @@
+to count your objects
+  db.collectionName.find({}).count();
+to git particular numbers of documents
+  db.collectionName.find({}).limit(number)
+  ex: db.collectionName.find({}).limit(3) git first three
+
+*you can chain this two methods
+  ex: db.collectionName.find({}).limit(3).count()
+  obviously it will return 3 but this is example of chain logic
+
+to sort your return find:
+  db.collectionName.find().sort(prop: 1 or -1)
+    1 for ascending order
+    -1 for descending order

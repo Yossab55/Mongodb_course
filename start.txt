@@ -1,0 +1,10 @@
+so I took the mongoDb course to understand mongoose deeply in 
+the future 
+so the course is Net ninja mongo db course 
+and hopefully I will write every lesson 
+this is the link of course : 
+  https://youtube.com/playlist?list=PL4cUxeGkcC9h77dJ-QJlwGlZlTd4ecZOA&si=XNxy2icE8A336iYy
+and what I have download: 
+  1- mongoDB community server version 8.0.5
+    * community server comes with GUi called Mongo db compass
+  2- mongoDb shell version 2.4.0

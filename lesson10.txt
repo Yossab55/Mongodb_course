@@ -1,0 +1,34 @@
+search in array
+  if you have genres ['romantic', 'fantasy']
+  and you want to search by one item in array
+  db.collectionName.find({genres: 'romantic'})
+  why? because mongo bd automatically when it finds it's array 
+  then it searches in it
+  but this query will return anything with romantic 
+  ex romantic and fantasy , romantic only, romantic and action
+  what if you want exact match
+  simple: 
+    db.collectionName.find({genres: ['romantic']})
+
+  and if you want more items:
+    db.collectionName.find({genres: [value1, value2, ...]})
+
+  what if you want to search by more value but not exact match
+    answer $all operation
+    db.collectionName.find({genres: {$all: [value1, value2, ...]}});
+  ex:
+  db.books.find({genres:{$all: ['fantasy', 'sci-fi']}})
+  return :
+    [
+      {
+        _id: ObjectId('67ce707aea41284253fa4215'),
+        title: 'Echoes of Time',
+        author: 'Liam Grayson',
+        rating: 4.8,
+        pages: 450,
+        // notice here there is three genres not two
+        genres: [ 'sci-fi', 'adventure', 'fantasy' ]
+      }
+    ]
+  with nested documents
+  db.collectionName.find({"prop.prop": value});

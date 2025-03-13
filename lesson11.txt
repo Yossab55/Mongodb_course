@@ -1,0 +1,25 @@
+delete
+
+tip: 
+  in compass you can export your data to a json file 
+  and insert them again
+
+  so do that before you use delete methods 
+  you don't want to write things again
+
+lesson: 
+  1- delete one: 
+    db.collectionName.deleteOne(prop: value)
+    delete one actually used with id only
+    because if you have prop with same values 
+    it will delete the first one only
+    ex rating: 7 maybe there is two or more books with rating 7
+    it will delete the first one ( ! obviously :) )
+    use delete many instead
+
+  2- deleteMany: 
+    db.collectionName.deleteMany({filter})
+    you can use any filter you learned with find methods
+
+  ! warning: 
+    deleteMany({}) will delete all documents be careful when using this

@@ -1,0 +1,48 @@
+Update commands: 
+
+  1- updateOne:
+    db.collectionName.updateOne(
+      {your filter (mostly would by id in updateOne)}
+      , {$set !(something new) : {prop: value, prop: value}}
+    )
+    ex: like you have a book and you want to update its price
+    
+    2- updateMany
+    db.collectionName.updateMany(
+      {your filter}
+      , {$set : {prop: value, prop: value}}
+    )
+Update Operators:
+
+  1- $set is an operator to set new values :)
+
+  2- $inc is an increment operator (+= in programming)
+    ex:  
+      db.books.updateOne(
+        {_id: ObjectId('67ce7c99ea41284253fa422c')},
+        {$inc: {pages: 40}}
+      )
+    and if you want to reduce use negative number ex: -40
+
+  3- $pull to delete item from array
+    ex: 
+      db.books.updateOne(
+        {_id: ObjectId('67ce7c99ea41284253fa422c')},
+        {$pull: {genres: "adventure"}}
+        )
+
+  4- $push to add item to an array
+    ex: 
+      db.books.updateOne(
+        {_id: ObjectId('67ce7c99ea41284253fa422c')},
+        {$pull: {genres: "adventure"}}
+        )
+
+  * so what if I want to add more than one item 
+  it's easy
+  5- $each
+    ex: 
+      db.books.updateOne(
+        {_id: ObjectId('67ce7c99ea41284253fa422c')},
+        {$push: {genres: {$each: ["adventure", "fantasy"]}}}
+        )

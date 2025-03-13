@@ -1,0 +1,12 @@
+ so data is stored in :
+ collection 
+ and every collection has rows
+ DataBase
+ --collection one
+ ----document one
+ ----document two
+ --collection two
+ ----document one
+
+ like in MySql 
+ data base -> table -> rows

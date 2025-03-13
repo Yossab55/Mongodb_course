@@ -1,0 +1,5 @@
+we have used mongodb compass 
+so if didn't run:
+  1- go to service * search about it int the search bar
+  2- search in services about mongodb services
+  3- switch it to running

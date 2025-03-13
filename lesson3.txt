@@ -1,0 +1,14 @@
+so something wired in this lesson:
+you can use a database in not create 
+if you have bookstore, todo list databases
+you can use test database
+and you can create a collection but it really doesn't exist!
+
+
+  1- show dbs = show databases show you all databases you have
+  2- use "database name" -> switch to this database
+  3- show collections -> shows collections inside that current 
+    database
+  4- help -> shows you all commands that can be used
+  5- you can make a variable !
+  see the images of lesson 3

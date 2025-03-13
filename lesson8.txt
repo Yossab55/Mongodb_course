@@ -1,0 +1,15 @@
+operators:
+  1- greater than: $gt
+  2- greater than or equal: $gt
+  3- less than: $ls
+  4- less than or equal: $lse
+  5- or filter: $or
+
+
+to use operators: 
+  db.collectionName.find({rating: {$gt: 7}})
+  db.collectionName.find({rating: {$gt: 7}, author: "Yossab Samouel"})
+  db.collectionName.find({$or: [{rating: 7}, {rating: 8}]})
+  db.collectionName.find({$or: [{rating: 7, author: "Yossab Samouel"}, rating: 8]})
+  db.collectionName.find({$or: [{rating: {$gse: 7}}]})
+  ** $or: [] -> array of filters
