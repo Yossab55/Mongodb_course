@@ -107,14 +107,21 @@ update operators:
   setup files 
   app.js file 
   package.json
-  needs to write these commands
+
+  * initialize npm back
 ``` 
   npm init -y
+```
 
+```
   npm install express
+```
 
+```
   npm install mongodb
+```
 
+```
   npm install nodemon
 ```
 
@@ -173,4 +180,3 @@ update operators:
   * atlas 
   * mongo db cloud server
   * how to connect
-  * 
